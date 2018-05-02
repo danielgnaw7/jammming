@@ -1,4 +1,5 @@
 import React from 'react';
+import './Track.css';
 
 
 class Track extends React.Component {
@@ -15,13 +16,13 @@ class Track extends React.Component {
   }
 
   addTrack() {
-  	const track = {id: this.props.id, name: this.props.name, artist: this.props.artist, album: this.props.album};
+  	const track = {id: this.props.id, name: this.props.name, uri: this.props.uri, artist: this.props.artist, album: this.props.album};
   	console.log(track);
   	this.props.onAdd(track);
   }
 
   removeTrack() {
-  	const track = {id: this.props.id,  name: this.props.name, artist: this.props.artist, album: this.props.album};
+  	const track = {id: this.props.id,  name: this.props.name, uri: this.props.uri, artist: this.props.artist, album: this.props.album};
   	console.log(track);
   	this.props.onRemove(track);
   }
